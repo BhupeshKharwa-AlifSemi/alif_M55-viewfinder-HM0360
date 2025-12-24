@@ -309,6 +309,36 @@
 // <o> OSPI1 onboard memory size
 #define BOARD_OSPI1_MEM_SIZE                            33554432
 
+// <o> Number of CH201 sensors
+#define BOARD_CH201_MAX_NUM_SENSORS                     1
+
+// <o> Number of CH201 buses
+#define BOARD_CH201_NUM_BUSES                           1
+
+// <o> Number of CH201 interrupt pins
+#define BOARD_CH201_SENSOR_INT_PIN                      1
+
+// <o> Number of CH201 trigger pins
+#define BOARD_CH201_SENSOR_TRIG_PIN                     1
+
+// <o> CH201 TOF PROG pin GPIO port number
+#define BOARD_CH201_SENSOR_PROG_IO_PORT                 6
+
+// <o> CH201 TOF PROG pin number
+#define BOARD_CH201_SENSOR_PROG_PIN_NO                  2
+
+// <o> CH201 TOF INT pin GPIO port numbet
+#define BOARD_CH201_SENSOR_INT_IO_PORT                  6
+
+// <o> CH201 TOF INT pin number
+#define BOARD_CH201_SENSOR_INT_PIN_NO                   3
+
+// <o> CH201 TOF RESET pin GPIO port number
+#define BOARD_CH201_SENSOR_RESET_IO_PORT                6
+
+// <o> CH201 TOF RESET pin number range
+#define BOARD_CH201_SENSOR_RESET_PIN_NO                 4
+
 // </h>
 // <h> GPIO port/pin numbers, analog instance/input numbers, etc.
 // <o> FLEX IO pins supply voltage <0=> 3.3 V <1=> 1.8 V
@@ -2089,13 +2119,16 @@
 // PIN5 <6=> PIN6 <7=> PIN7
 #define BOARD_IS66_HYPERRAM_RESET_GPIO_PIN              6
 
-// <o> "ISSI_FLASH_RESET" GPIO port number <0=> GPIO0 <1=> GPIO1 <2=> GPIO2 <3=> GPIO3 <4=> GPIO4
+// OSPI Flash instance number (Do Not Modify!)
+#define BOARD_OSPI_FLASH_INSTANCE                       1
+
+// <o> "OSPI_FLASH_RESET" GPIO port number <0=> GPIO0 <1=> GPIO1 <2=> GPIO2 <3=> GPIO3 <4=> GPIO4
 // <5=> GPIO5 <6=> GPIO6 <7=> GPIO7 <8=> GPIO8 <9=> GPIO9 <10=> GPIO10 <11=> GPIO11 <12=> GPIO12
 // <13=> GPIO13 <14=> GPIO14 <15=> LPGPIO
-#define BOARD_ISSI_FLASH_RESET_GPIO_PORT                15
-// <o> "ISSI_FLASH_RESET" GPIO pin number <0=> PIN0 <1=> PIN1 <2=> PIN2 <3=> PIN3 <4=> PIN4 <5=>
+#define BOARD_OSPI_FLASH_RESET_GPIO_PORT                15
+// <o> "OSPI_FLASH_RESET" GPIO pin number <0=> PIN0 <1=> PIN1 <2=> PIN2 <3=> PIN3 <4=> PIN4 <5=>
 // PIN5 <6=> PIN6 <7=> PIN7
-#define BOARD_ISSI_FLASH_RESET_GPIO_PIN                 5
+#define BOARD_OSPI_FLASH_RESET_GPIO_PIN                 7
 
 // P0_0 ADC12 instance number (Do Not Modify!)
 #define BOARD_P0_0_ADC12_INSTANCE                       0
@@ -2397,4 +2430,9 @@
 // <o> "MIC_INPUT_SCLK" GPIO pin alternate function <0-7>
 #define BOARD_MIC_INPUT_SCLK_ALTERNATE_FUNCTION         2
 
+// <e> "ISSI HYPERRAM" connected to HSPI presence flag
+#define BOARD_ISSI_HYPERRAM_PRESENT                     1
+
+// <e> "APS512XXN PSRAM" connected to HSPI presence flag
+#define BOARD_APS512XXN_PSRAM_PRESENT                   0
 // </h>

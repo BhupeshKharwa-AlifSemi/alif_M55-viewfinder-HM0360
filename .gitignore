@@ -1,5 +1,7 @@
+.vscode/
 out/
 tmp/
+*.cbuild-pack.yml
 *.cbuild-idx.yml
 *.cbuild-set.yml
 *.cbuild-run.yml

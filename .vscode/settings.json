@@ -7,4 +7,8 @@
 
     "cortex-debug.variableUseNaturalFormat": false,
     "debug.hideSlowPreLaunchWarning": true,
+    "debug.showInStatusBar": "never",
+    "clangd.arguments": [
+        "--compile-commands-dir=c:\\Alif\\dev\\alif_M55-viewfinder-HM0360\\out\\viewfinder\\E8-HE\\release"
+    ],
 }

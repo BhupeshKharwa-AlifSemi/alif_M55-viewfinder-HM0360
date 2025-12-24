@@ -13,8 +13,6 @@
 #ifndef __RTE_DEVICE_H
 #define __RTE_DEVICE_H
 
-#include "board_defs.h"
-
 // <e> MRAM (NVM (Non-Volatile Memory)) [Driver_MRAM]
 // <i> Configuration settings for Driver_MRAM in component ::Drivers:MRAM
 #define RTE_MRAM 1
@@ -45,7 +43,7 @@
 //     <1=> enable
 // <i> Defines CPI AXI port
 // <i> Default: AXI port enable
-#define RTE_CPI_AXI_PORT                                      0
+#define RTE_CPI_AXI_PORT                                      1
 
 // <o> Select CPI ISP port
 //     <0=> disable
@@ -192,16 +190,6 @@
 // <i> defines select MT9M114 frame width.
 // <i> default: 640
 #define RTE_MT9M114_CAMERA_SENSOR_CPI_FRAME_WIDTH     640
-
-// <o> RTE_MT9M114_CAMERA_SENSOR_CPI_I2C_INSTANCE
-// <i> Defines camera sensor MT9M114 i2c instance
-//     <0=>   I2C0
-//     <1=>   I2C1
-//     <2=>   I2C2
-//     <3=>   I2C3
-//     <4=>   I2C OVER I3C
-// <i> Default: 1
-#define RTE_MT9M114_CAMERA_SENSOR_CPI_I2C_INSTANCE            1
 
 #endif
 // </e> MT9M114 [Driver_MT9M114]
@@ -361,16 +349,6 @@
 // <i> defines select MT9M114 frame width.
 // <i> default: 640
 #define RTE_MT9M114_CAMERA_SENSOR_LPCPI_FRAME_WIDTH     640
-
-// <o> RTE_MT9M114_CAMERA_SENSOR_LPCPI_I2C_INSTANCE
-// <i> Defines camera sensor MT9M114 i2c instance
-//     <0=>   I2C0
-//     <1=>   I2C1
-//     <2=>   I2C2
-//     <3=>   I2C3
-//     <4=>   I2C OVER I3C
-// <i> Default: 1
-#define RTE_MT9M114_CAMERA_SENSOR_LPCPI_I2C_INSTANCE          1
 
 #endif
 // </e> MT9M114 [Driver_MT9M114]
@@ -686,7 +664,7 @@
 //     <90=> 90 FPS
 // <i> Defines camera ARX3A0 frame per second
 // <i> Default: 90 FPS
-#define RTE_ARX3A0_CAMERA_SENSOR_CSI_CFG_FPS                 40
+#define RTE_ARX3A0_CAMERA_SENSOR_CSI_CFG_FPS             90
 
 // <o> Select camera ARX3A0 frequency
 // <i> Defines camera ARX3A0 frequency
@@ -736,22 +714,22 @@
 // <o> Select camera sensor ARX3A0 reset pin number
 // <i> Defines camera sensor ARX3A0 reset pin number
 // <i> Default: 1
-#define RTE_ARX3A0_CAMERA_SENSOR_RESET_PIN_NO                BOARD_CAMERA_RESET_GPIO_PIN
+#define RTE_ARX3A0_CAMERA_SENSOR_RESET_PIN_NO            1
 
 // <o> Select camera sensor ARX3A0 reset GPIO port
 // <i> Defines camera sensor ARX3A0 reset GPIO port
 // <i> Default: 9
-#define RTE_ARX3A0_CAMERA_SENSOR_RESET_GPIO_PORT             BOARD_CAMERA_RESET_GPIO_PORT
+#define RTE_ARX3A0_CAMERA_SENSOR_RESET_GPIO_PORT         9
 
 // <o> Select camera sensor ARX3A0 power pin number
 // <i> Defines camera sensor ARX3A0 power pin number
 // <i> Default: 5
-#define RTE_ARX3A0_CAMERA_SENSOR_POWER_PIN_NO                BOARD_CAMERA_POWER_GPIO_PIN
+#define RTE_ARX3A0_CAMERA_SENSOR_POWER_PIN_NO            5
 
 // <o> Select camera sensor ARX3A0 power GPIO port
 // <i> Defines camera sensor ARX3A0 power GPIO port
 // <i> Default: 7
-#define RTE_ARX3A0_CAMERA_SENSOR_POWER_GPIO_PORT             BOARD_CAMERA_POWER_GPIO_PORT
+#define RTE_ARX3A0_CAMERA_SENSOR_POWER_GPIO_PORT         7
 
 // <o> RTE_ARX3A0_CAMERA_SENSOR_I2C_INSTANCE
 // <i> Defines camera sensor ARX3A0 i2c instance
@@ -824,12 +802,12 @@
 // <o> Select camera sensor AR0144 reset pin number
 // <i> Defines camera sensor AR0144 reset pin number
 // <i> Default: 5
-#define RTE_AR0144_CAMERA_SENSOR_RESET_PIN_NO                 BOARD_CAMERA_RESET_GPIO_PIN
+#define RTE_AR0144_CAMERA_SENSOR_RESET_PIN_NO            1
 
 // <o> Select camera sensor AR0144 reset GPIO port
 // <i> Defines camera sensor AR0144 reset GPIO port
 // <i> Default: 4
-#define RTE_AR0144_CAMERA_SENSOR_RESET_GPIO_PORT              BOARD_CAMERA_RESET_GPIO_PORT
+#define RTE_AR0144_CAMERA_SENSOR_RESET_GPIO_PORT         9
 
 // <o> Select camera sensor AR0144 power pin number
 // <i> Defines camera sensor AR0144 power pin number
@@ -1083,22 +1061,22 @@
 // <o> Select camera sensor MT9M114 MIPI reset pin number
 // <i> Defines camera sensor MT9M114 MIPI reset pin number
 // <i> Default: 1
-#define RTE_MT9M114_CAMERA_SENSOR_MIPI_RESET_PIN_NO                 BOARD_CAMERA_RESET_GPIO_PIN
+#define RTE_MT9M114_CAMERA_SENSOR_MIPI_RESET_PIN_NO            1
 
 // <o> Select camera sensor MT9M114 MIPI reset GPIO port
 // <i> Defines camera sensor MT9M114 MIPI reset GPIO port
 // <i> Default: 9
-#define RTE_MT9M114_CAMERA_SENSOR_MIPI_RESET_GPIO_PORT              BOARD_CAMERA_RESET_GPIO_PORT
+#define RTE_MT9M114_CAMERA_SENSOR_MIPI_RESET_GPIO_PORT         9
 
 // <o> Select camera sensor MT9M114 MIPI power pin number
 // <i> Defines camera sensor MT9M114 MIPI power pin number
 // <i> Default: 5
-#define RTE_MT9M114_CAMERA_SENSOR_MIPI_POWER_PIN_NO                 BOARD_CAMERA_POWER_GPIO_PIN
+#define RTE_MT9M114_CAMERA_SENSOR_MIPI_POWER_PIN_NO            5
 
 // <o> Select camera sensor MT9M114 MIPI power GPIO port
 // <i> Defines camera sensor MT9M114 MIPI power GPIO port
 // <i> Default: 7
-#define RTE_MT9M114_CAMERA_SENSOR_MIPI_POWER_GPIO_PORT              BOARD_CAMERA_POWER_GPIO_PORT
+#define RTE_MT9M114_CAMERA_SENSOR_MIPI_POWER_GPIO_PORT         7
 
 // <o> RTE_MT9M114_CAMERA_SENSOR_MIPI_I2C_INSTANCE
 // <i> Defines camera sensor MT9M114 MIPI i2c instance
@@ -1358,22 +1336,22 @@
 // <o> Select camera sensor OV5675 reset pin number
 // <i> Defines camera sensor OV5675 reset pin number
 // <i> Default: 1
-#define RTE_OV5675_CAMERA_SENSOR_RESET_PIN_NO               BOARD_CAMERA_RESET_GPIO_PIN
+#define RTE_OV5675_CAMERA_SENSOR_RESET_PIN_NO            1
 
 // <o> Select camera sensor OV5675 reset GPIO port
 // <i> Defines camera sensor OV5675 reset GPIO port
 // <i> Default: 9
-#define RTE_OV5675_CAMERA_SENSOR_RESET_GPIO_PORT            BOARD_CAMERA_RESET_GPIO_PORT
+#define RTE_OV5675_CAMERA_SENSOR_RESET_GPIO_PORT         9
 
 // <o> Select camera sensor OV5675 power pin number
 // <i> Defines camera sensor OV5675 power pin number
 // <i> Default: 5
-#define RTE_OV5675_CAMERA_SENSOR_POWER_PIN_NO               BOARD_CAMERA_POWER_GPIO_PIN
+#define RTE_OV5675_CAMERA_SENSOR_POWER_PIN_NO            5
 
 // <o> Select camera sensor OV5675 power GPIO port
 // <i> Defines camera sensor OV5675 power GPIO port
 // <i> Default: 7
-#define RTE_OV5675_CAMERA_SENSOR_POWER_GPIO_PORT            BOARD_CAMERA_POWER_GPIO_PORT
+#define RTE_OV5675_CAMERA_SENSOR_POWER_GPIO_PORT         7
 
 // <o RTE_OV5675_CAMERA_SENSOR_I2C_INSTANCE> Select camera sensor OV5675 i2c instance
 // <i> Defines camera sensor OV5675 i2c instance
@@ -1486,22 +1464,22 @@
 // <o> ILI9806 LCD panel reset pin number
 // <i> Defines ILI9806 LCD panel reset pin number.
 // <i> Default: 5
-#define RTE_ILI9806E_PANEL_RESET_PIN_NO                  BOARD_LCD_RESET_GPIO_PIN
+#define RTE_ILI9806E_PANEL_RESET_PIN_NO     5
 
 // <o> ILI9806 LCD panel reset pin GPIO port number
 // <i> Defines ILI9806 LCD panel reset pin GPIO port number.
 // <i> Default: 15
-#define RTE_ILI9806E_PANEL_RESET_GPIO_PORT               BOARD_LCD_RESET_GPIO_PORT
+#define RTE_ILI9806E_PANEL_RESET_GPIO_PORT  15
 
 // <o> ILI9806 LCD panel back light pin number
 // <i> Defines ILI9806 LCD panel back light pin number.
 // <i> Default: 1
-#define RTE_ILI9806E_PANEL_BL_LED_PIN_NO                 BOARD_LCD_BACKLIGHT_GPIO_PIN
+#define RTE_ILI9806E_PANEL_BL_LED_PIN_NO    1
 
 // <o> ILI9806 LCD panel back light pin GPIO port number
 // <i> Defines ILI9806 LCD panel back light pin GPIO port number.
 // <i> Default: 6
-#define RTE_ILI9806E_PANEL_BL_LED_GPIO_PORT              BOARD_LCD_BACKLIGHT_GPIO_PORT
+#define RTE_ILI9806E_PANEL_BL_LED_GPIO_PORT 6
 
 // <e> MIPI_DSI (ILI9806E_PANEL_E43RB_FW405 | ILI9806E_PANEL_E43GB_MW405) [Driver_ILI9806E_PANEL]
 #if (RTE_ILI9806E_PANEL_E43RB_FW405_EN || RTE_ILI9806E_PANEL_E43GB_MW405_EN)
@@ -1713,36 +1691,6 @@
 // <i> default: 5
 #define RTE_ACTIVE_TOUCH_POINTS               5
 
-// <o> GT911 Touch screen reset pin GPIO port number range <0-15>
-// <i> Defines GT911 Touch screen reset pin GPIO port number.
-// <i> Default: 4
-#define RTE_GT911_TOUCH_RESET_GPIO_PORT   BOARD_TOUCH_RESET_GPIO_PORT
-
-// <o> GT911 Touch screen reset pin number range <0-7>
-// <i> Defines GT911 Touch screen reset pin number.
-// <i> Default: 0
-#define RTE_GT911_TOUCH_RESET_PIN_NO      BOARD_TOUCH_RESET_PIN_NO
-
-// <o> GT911 Touch screen INT pin GPIO port number range <0-15>
-// <i> Defines GT911 Touch screen INT pin GPIO port number.
-// <i> Default: 9
-#define RTE_GT911_TOUCH_INT_GPIO_PORT     BOARD_TOUCH_INT_GPIO_PORT
-
-// <o> GT911 Touch screen INT pin number range <0-7>
-// <i> Defines GT911 Touch screen INT pin number.
-// <i> Default: 4
-#define RTE_GT911_TOUCH_INT_PIN_NO        BOARD_TOUCH_INT_PIN_NO
-
-// <o> RTE_GT911_TOUCH_I2C_INSTANCE
-// <i> Defines GT911 Touchscreen i2c instance
-//     <0=>   I2C0
-//     <1=>   I2C1
-//     <2=>   I2C2
-//     <3=>   I2C3
-//     <4=>   I2C OVER I3C
-// <i> Default: 1
-#define RTE_GT911_TOUCH_I2C_INSTANCE     1
-
 // <o> RTE_GT911_TOUCH_I2C_SLAVE_ADDRESS_SEL
 // <i> Defines GT911 Touchscreen i2c slave address selection
 //     <0x14=>   I2C_SLAVE_ADDRESS_HEX_14
@@ -1796,7 +1744,7 @@
 //      <7=> ARGB4444
 // <i> Defines CDC200 pixel format
 // <i> Default: RGB888
-#define RTE_CDC200_PIXEL_FORMAT              2
+#define RTE_CDC200_PIXEL_FORMAT   1
 
 // <o> CDC200 Constant alpha <0-255>
 // <i> Defines CDC200 constant alpha range from 0 (fully transparent) to 255 or 1.0 (fully opaque).

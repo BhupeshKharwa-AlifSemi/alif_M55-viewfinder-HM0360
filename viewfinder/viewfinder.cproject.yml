@@ -88,7 +88,11 @@ project:
       for-context:
         - +E7-HE
         - +E7-HP
-    - component: AlifSemiconductor::BSP:DevKit Config&DevKit-e8
+    # - component: AlifSemiconductor::BSP:DevKit Config&DevKit-e8
+    #   for-context:
+    #     - +E8-HE
+    #     - +E8-HP
+    - component: AlifSemiconductor::BSP:AppKit Config&AppKit-E8-AIML
       for-context:
         - +E8-HE
         - +E8-HP
